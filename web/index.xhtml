@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>asdfasdf<br/>dfs<br/>
+
+    
+<h:body>
+        <h:form>
+            <h:outputLabel for="name" value="Enter your name  "  />
+            <h:inputText id="name" value="#{newJSFManagedBean.name}" required="true">
+		 <f:validateLength for="name" minimum="5" maximum="20"/>	
+	    </h:inputText>
+            <h:message for="name" style="color:red" />
+            <br />
+	    
+            <h:outputLabel for="street1" value="Enter your street1  "  />
+            <h:inputText id="street1" value="#{newJSFManagedBean.street1}" required="true">
+		 <f:validateLength for="street1" minimum="5" maximum="20" />
+	    </h:inputText>
+            <h:message for="street1" style="color:red" />
+            <br />
+	    
+            <h:outputLabel for="street2" value="Enter your street2  "  />
+            <h:inputText id="street2" value="#{newJSFManagedBean.street2}" required="true">
+		 <f:validateLength for="street2" minimum="5" maximum="20" />
+	    </h:inputText>
+            <h:message for="street2" style="color:red" />
+            <br />
+	    
+            <h:outputLabel for="apt" value="Enter your apt  "  />
+            <h:inputText id="apt" value="#{newJSFManagedBean.apt}" required="true">
+		 <f:validateLength for="apt" minimum="5" maximum="20" />
+	    </h:inputText>
+            <h:message for="apt" style="color:red" />
+            <br />
+	    
+            <h:commandButton value="Say hello" action="#{newJSFManagedBean.createMessage}">
+                <f:ajax execute="@form" render="@form" />
+            </h:commandButton>
+            <br />
+            <br />
+            #{newJSFManagedBean.message}
+            <br />
+            #{newJSFManagedBean.name}
+            <br />
+            #{newJSFManagedBean.street1}
+            <br />
+            #{newJSFManagedBean.street2}
+            <br />
+            #{newJSFManagedBean.apt}
+        </h:form>
+    </h:body>
+   </html>
+
